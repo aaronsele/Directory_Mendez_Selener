@@ -1,33 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from './paginas/Home';
+import Estadisticas from './paginas/Estadisticas';
+import Contacto from './paginas/Contacto';
+import Layout from './components/Layout';
+import NoEncontrado from './paginas/NoEncontrado';
+import DetallePersona from './paginas/DetallePersona';
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        AURA
-      </p>
+     <BrowserRouter>
+<Routes>
+<Route path="/" element={<Layout/>} ></Route>
+<Route path="/Home" element={<Home/>}></Route>
+<Route path="/DetallePersona:personaId" element={<DetallePersona/>}></Route>
+<Route path="/Estadisticas" element={<Estadisticas/>}></Route>
+<Route path="/Contacto" element={<Contacto/>}></Route>
+<Route path="*" element={<NoEncontrado/>}></Route>
+</Routes>
+     </BrowserRouter>
+      
     </>
   )
 }
