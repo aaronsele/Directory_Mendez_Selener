@@ -1,0 +1,22 @@
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h1, h2, h3 {
+    color: #0074D9;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    background: #fff;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-left: 4px solid #0074D9;
+  }

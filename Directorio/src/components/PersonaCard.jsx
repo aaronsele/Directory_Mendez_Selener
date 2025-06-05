@@ -1,13 +1,12 @@
-import { Link } from "react-router-dom";
-import './PersonaCard.css';
-
+import { Link } from 'react-router-dom';
+import './PersonaCard.css'
 function PersonaCard({ persona }) {
   return (
-    <>
-      <h3>{persona.nombre} {persona.apellido}</h3>
+    <div>
+      <h2>{persona.nombre} {persona.apellido}</h2>
       <p>Edad: {persona.edad}</p>
-      <Link to={`/persona/${persona.id}`}>Ver más</Link>  
-      </>
+      <Link to={`/DetallePersona/${persona.id}`}><button>Ver más</button></Link>
+    </div>
   );
 }
 

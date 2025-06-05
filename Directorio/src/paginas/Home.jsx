@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import PersonaCard from "../components/PersonaCard";
+import { useEffect, useState } from 'react';
+import PersonaCard from '../components/PersonaCard';
+import './Home.css'
 
 function Home() {
   const [personas, setPersonas] = useState([]);
@@ -11,10 +12,12 @@ function Home() {
   }, []);
 
   return (
-    <>
-      <h1>Listado de Personas</h1>    
-        {personas.map(p => <PersonaCard key={p.id} persona={p} />)}
-    </>
+    <div>
+      <h1>Personas</h1>
+      <div className="lista">
+      {personas.map(persona => <PersonaCard key={persona.id} persona={persona} />)}
+      </div>
+    </div>
   );
 }
 
