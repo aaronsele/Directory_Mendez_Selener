@@ -1,5 +1,6 @@
-.lista{
-    display: flex;
-    flex-direction: column;
-  }
-  
+.lista {
+  display: flex;
+  flex-wrap: wrap;         
+  gap: 20px;              
+  justify-content: center;  
+}

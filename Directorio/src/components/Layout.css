@@ -1,18 +1,16 @@
-header, nav, footer {
-    background-color: #0074D9;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
+body, #root {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; 
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
